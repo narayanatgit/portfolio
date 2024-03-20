@@ -21,7 +21,7 @@ function Projects(props)
                     <div class="section-title blog-title">
                         <p class="section-para"><span></span>Projects</p>
                         <h1>Articles On  
-                            New Project</h1>
+                            Project</h1>
                     </div>
                 </div>
                 
@@ -34,7 +34,9 @@ function Projects(props)
                             <img src={item.image.url} alt=""/>
                         </div>
                         <div class="single-blog-content">
-                            <p><i class="fa-solid fa-rocket"></i>Title: {item.title}</p>
+                            <p>Title: {item.title}</p>
+                            <p><i class="fa fa-github fa-2x" ></i>{item.githuburl}</p>
+                            <p><i class="fa fa-link  fa-2x" aria-hidden="true"></i>{item.liveurl}</p>
                             <p class="styled-para">Tech Stack: {item.techStack}</p>
                             
                         </div>

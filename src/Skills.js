@@ -2,9 +2,13 @@
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+import { CircularProgressbar } from 'react-circular-progressbar';
+import 'react-circular-progressbar/dist/styles.css';
+import './progress.css'
 function Skills(props)
 {
     const {userda}=props
+    const value=2
     var skills=[]
 if(userda)
 {
@@ -51,11 +55,9 @@ if(userda)
                            
                        </div>
                        <div class="single-team-content text-center">
-                           <h4>{item.name}</h4>
-                           <div class="w3-light-grey">
-  <div class="w3-container w3-green w3-center" style={{width:item.percentage}}>{item.percentage}</div>
-</div>
+                           <h4>{item.name}</h4> 
                            
+                           <CircularProgressbar value={item.percentage} maxValue={100} text={`${item.percentage}%`} />;
                        </div>
                    </div>
                </div>))}
